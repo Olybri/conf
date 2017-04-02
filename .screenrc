@@ -1,0 +1,5 @@
+defutf8 on
+utf8 on on
+vbell off
+hardstatus alwayslastline "%{b kB}%{s gB}%c:%s%{b kB} %{b kR}%H %{b kB}%{s yB}%l%{b kB} %{b kB}%{rs Y}%-Lw%{BY}%50>%n%{R}%f%{B} %t%{YB}%+Lw%<"
+
