@@ -6,13 +6,20 @@
 ;= Add aliases below here
 e.=explorer .
 
+g=git $*
 gl=git log --oneline --all --graph --decorate $*
+gf=git fetch $*
+gm=git merge $*
+gfm=git pull $*
 gs=git status -s $*
 gd=git diff *$**
 gc=git commit -m "$*"
 gca=git commit -am "$*"
 gp=git push $*
 ga=git add *$**
+gamend=git commit --amend --no-edit $*
+gtrack=git update-index --no-assume-unchanged $*
+guntrack=git update-index --assume-unchanged $*
 
 pwd=cd
 clear=cls
