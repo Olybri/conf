@@ -2,10 +2,11 @@
 
 -- Resets the prompt
 function lambda_prompt_filter()
-    cwd = clink.get_cwd()
     -- prompt = "\x1b[1;32;40m{cwd} {git}{hg} \n\x1b[1;30;40m{lamb} \x1b[0m"
     prompt = "\x1b[48;5;8m\x1b[38;5;10m {cwd} {git}{hg}\n\x1b[38;5;240m{lamb} \x1b[0m"
-    new_value = string.gsub(prompt, "{cwd}", cwd)
+    new_value = string.gsub(prompt, "{cwd}", clink.get_cwd())
+    new_value = string.gsub(new_value, "C:\\Users\\loris", "~")
+    new_value = string.gsub(new_value, "\\", "/")
     clink.prompt.value = string.gsub(new_value, "{lamb}", ">")
 end
 
