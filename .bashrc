@@ -18,9 +18,10 @@ export GIT_PS1_SHOWCOLORHINTS=true
 source /usr/share/git/completion/git-completion.bash
 source /usr/share/git/git-prompt.sh
 
-short_dir='/.' # keep n first letters
-cwd='$(echo \w|sed -e "s;$HOME;~;" -e "s;\($short_dir\)[^/]*;\1;g" -e "s;\($short_dir\)\$;/$(basename \w);")'
-PROMPT_COMMAND='__git_ps1 "\n\e[0m\u in \e[1;32m$cwd\e[0m" "\n\e[0;34m>\e[0m "'
+# short_dir='/.' # keep n first letters
+# cwd='$(echo \w|sed -e "s;$HOME;~;" -e "s;\($short_dir\)[^/]*;\1;g" -e "s;\($short_dir\)\$;/$(basename \w);")'
+
+PROMPT_COMMAND='__git_ps1 "\n\e[0m\u@\h: \e[1;32m$\w\e[0m" "\n\e[0;34m>\e[0m "'
 
 HISTCONTROL=ignoreboth
 HISTSIZE=1000
