@@ -21,7 +21,7 @@ source /usr/share/git/git-prompt.sh
 # short_dir='/.' # keep n first letters
 # cwd='$(echo \w|sed -e "s;$HOME;~;" -e "s;\($short_dir\)[^/]*;\1;g" -e "s;\($short_dir\)\$;/$(basename \w);")'
 
-PROMPT_COMMAND='__git_ps1 "\n\e[0m\u@\h: \e[1;32m$\w\e[0m" "\n\e[0;34m>\e[0m "'
+PROMPT_COMMAND='__git_ps1 "\n\e[0m\u@\h: \e[1;32m\w\e[0m" "\n\e[0;34m>\e[0m "'
 
 HISTCONTROL=ignoreboth
 HISTSIZE=1000
@@ -40,3 +40,8 @@ export LESS_TERMCAP_se=$'\E[0m'
 export LESS_TERMCAP_so=$'\E[01;44;33m'
 export LESS_TERMCAP_ue=$'\E[0m'
 export LESS_TERMCAP_us=$'\E[01;32m'
+
+TZ='Europe/Zurich'
+export TZ
+
+PATH=$PATH:/usr/sbin
